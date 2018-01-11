@@ -53,7 +53,7 @@ bool checkData(string  a, string b)
 
 int main()
 {
-    //READ("input.txt");
+	//READ("input.txt");
 	//WRITE("output.txt");
 
 	ll TC;
