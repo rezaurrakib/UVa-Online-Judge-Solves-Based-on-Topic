@@ -36,7 +36,6 @@ map<string,pair<string,string> > ChildInfo;
 
 void GeneMapping(string a, string b, string child)
 {
-
     //cout << a << " -> " << b << " -> " << child << "\n";
 
     if(a=="dominant" && b=="dominant")
@@ -61,10 +60,8 @@ void GeneMapping(string a, string b, string child)
 
 }
 
-
 void checkInfoChild(string a, string b, string child)
 {
-
     if(GeneInfo[a]!="" && GeneInfo[b]!="")
     {
         GeneMapping(GeneInfo[a],GeneInfo[b],child);
@@ -83,9 +80,7 @@ void clear()
 {
     GeneInfo.clear();
     ChildInfo.clear();
-
 }
-
 
 int main()
 {
@@ -95,7 +90,6 @@ int main()
     ll N;
 
     //while(cin >> N)
-    //{
     cin >> N;
     getchar();
     string a,b;
@@ -116,22 +110,16 @@ int main()
         }
     }
 
-
     /*
     for(map<string,string>::iterator it = GeneInfo.begin(); it!=GeneInfo.end();  it++)
     	cout << it->first << " " << it->second << "\n";
 
-
     cout << "\n\n\n";
-
-
     for(map<string,pair<string,string> >::iterator it = ChildInfo.begin(); it!=ChildInfo.end(); it++)
     {
     	cout << it->first << "<=> ( " <<  it->second.first << ", " << it->second.second << " )\n";
 
     }
-
-
     cout << "\n\n\n";
     */
 
@@ -144,13 +132,9 @@ int main()
 
     }
 
-
     for(map<string,string>::iterator it = GeneInfo.begin(); it!=GeneInfo.end();  it++)
         cout << it->first << " " << it->second << "\n";
 
-
     //clear();
-
-
     return 0;
 }
