@@ -32,9 +32,7 @@ struct MyStruct
 {
 	bool operator()(const char &a, const char &b)
 	{
-
 		ll diff = (a|32) - (b|32); // letter = letter|32 return the lowercase conversion value of letter //
-
 		if(diff) return  diff<0;
 		else return a<b;
 	}
@@ -42,10 +40,7 @@ struct MyStruct
 
 int main()
 {
-    //READ("input.txt");
-
-	// UVA_192
-
+	//READ("input.txt");
 	ll TC;
 	string str;
 	cin >>TC;
