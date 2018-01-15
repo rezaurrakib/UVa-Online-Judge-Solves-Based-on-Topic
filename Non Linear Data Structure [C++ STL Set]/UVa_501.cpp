@@ -36,15 +36,15 @@ typedef long long ll;
 
 int main()
 {
-	//READ("input.txt");
-	//OUTPUT("output.txt");
-
-
+    //READ("input.txt");
+    //OUTPUT("output.txt");
+	
     ll TC,N,M,a;
     bool sp=false;
     cin >> TC;
 
-    while(TC--){
+    while(TC--)
+    {
 
         if(sp) cout << "\n";
         else sp=true;
@@ -54,7 +54,8 @@ int main()
         multiset<ll>::iterator it;
         cin >> N >> M;
 
-        for(ll i=0; i<N; i++){
+        for(ll i=0; i<N; i++)
+        {
             cin >> a;
             V.push_back(a);
         }
@@ -65,12 +66,15 @@ int main()
         ll index=1;
         bool firstData=false;
 
-        for(ll i=0; i<M; i++){
+        for(ll i=0; i<M; i++)
+        {
             cin >> a;
 
-            if(a>Data.size()){
+            if(a>Data.size())
+            {
 
-                for(ll j=index; j<a; j++){
+                for(ll j=index; j<a; j++)
+                {
                     Data.insert(V[j]);
                     if(*it>V[j]) it--;
                 }
@@ -84,9 +88,7 @@ int main()
 
         }
 
-
     }
 
-
-	return 0;
+    return 0;
 }
