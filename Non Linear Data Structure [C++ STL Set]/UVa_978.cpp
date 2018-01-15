@@ -39,8 +39,8 @@ typedef long long ll;
 
 int main()
 {
-	//READ("input.txt");
-	//OUTPUT("output.txt");
+    //READ("input.txt");
+    //OUTPUT("output.txt");
 
     bool sp=false;
     ll TC,Battle,G,B,a;
@@ -56,20 +56,23 @@ int main()
         multiset<ll,greater<ll> > SBlue;
 
 
-        for(ll i=0; i<G; i++){
+        for(ll i=0; i<G; i++)
+        {
             cin >> a;
             SGreen.insert(a);
         }
         //print(SGreen);
 
-        for(ll i=0; i<B; i++){
+        for(ll i=0; i<B; i++)
+        {
             cin >> a;
             SBlue.insert(a);
         }
 
         //cout << "Trace : " << mBattle << "\n";
 
-        while(!SBlue.empty() && !SGreen.empty()){
+        while(!SBlue.empty() && !SGreen.empty())
+        {
 
             vector<ll> tempGreen;
             vector<ll> tempBlue;
@@ -77,7 +80,8 @@ int main()
             ll mBattle = min(SBlue.size(),SGreen.size());
             mBattle = min(mBattle,Battle);
 
-            for(ll i=0; i<mBattle; i++){
+            for(ll i=0; i<mBattle; i++)
+            {
                 ll gData = *(SGreen.begin());
                 ll bData = *(SBlue.begin());
 
@@ -96,26 +100,29 @@ int main()
         if(SBlue.empty() && SGreen.empty())
             cout << "green and blue died\n";
 
-        else if(SBlue.empty()){
+        else if(SBlue.empty())
+        {
             cout << "green wins\n";
 
-            while(!SGreen.empty()){
+            while(!SGreen.empty())
+            {
                 cout << *(SGreen.begin()) << "\n";
                 SGreen.erase(SGreen.begin());
             }
         }
 
-         else if(SGreen.empty()){
+        else if(SGreen.empty())
+        {
             cout << "blue wins\n";
 
-            while(!SBlue.empty()){
+            while(!SBlue.empty())
+            {
                 cout << *(SBlue.begin()) << "\n";
                 SBlue.erase(SBlue.begin());
             }
         }
 
     }
-
 
     return 0;
 }
