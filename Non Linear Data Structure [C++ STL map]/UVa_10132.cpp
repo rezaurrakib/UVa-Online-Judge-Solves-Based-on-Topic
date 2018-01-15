@@ -2,7 +2,6 @@
     @author Reza
     Samsung Research, Bangladesh
     @email rakib08cse@gmail.com
-
 */
 
 #include <vector>
